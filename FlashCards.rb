@@ -32,6 +32,9 @@ class FlashCards
         @input = gets.chomp
       elsif @input == "exit"
         break
+      elsif @input == "hint"
+        print_hint(@current_card.give_hint)
+        @input = gets.chomp
       else
         wrong_answer
         @wrong_limit += 1

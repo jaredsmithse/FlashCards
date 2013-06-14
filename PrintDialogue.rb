@@ -23,4 +23,8 @@ module PrintDialogue
   def gave_up
     puts "You should just give up on life, but here is your answer."
   end
+
+  def print_hint(hint)
+    puts "The first letter is...#{hint}"
+  end
 end

@@ -1,15 +1,16 @@
 class Deck
+  attr_reader :deck
 
-  def initialize
+  def initialize(deck)
     @deck = deck    
   end
 
   def get_card
-    @cards.shuffle.pop  
+    @deck.shuffle.pop  
   end
 
   def cards_left
-    @cards.length > 0?
+    @deck.length > 0?
   end
 
 end

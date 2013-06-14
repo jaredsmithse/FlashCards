@@ -33,7 +33,6 @@ class Parser
   end
 end
 
-text = Parser.new('./flashcard_samples.txt')
-text.read_in_cards
+
 
 # Card.new(word,definition)

@@ -1,10 +1,11 @@
+require './card'
+require './deck'
 
 class Parser
 
 
   def initialize(file)
     @file = file
-
   end
 
   def read_in_cards
@@ -15,7 +16,7 @@ class Parser
     flashcard_array.delete_if { |element| element == ""}
     output = []
     flashcard_array.each_slice(2) { |card| output << card }
-    puts make_deck(make_cards(output))
+    make_deck(make_cards(output))
   end
 
   private

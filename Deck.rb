@@ -9,8 +9,8 @@ class Deck
     @deck.shuffle.pop  
   end
 
-  def cards_left
-    @deck.length > 0?
+  def cards_left?
+    @deck.length > 0
   end
 
 end

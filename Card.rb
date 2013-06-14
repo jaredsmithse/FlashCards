@@ -6,7 +6,7 @@ class Card
 	end
 
   def print_answer
-    puts "Answer: #{@word}"
+    print "Answer: #{@word} \n\n"
   end
 
   def print_definition

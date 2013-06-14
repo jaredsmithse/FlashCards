@@ -3,11 +3,11 @@ module PrintDialogue
   def game_start
     puts "Welcome to Flash Cards with Friends!"
     puts "Type 'exit' if you feel you're in over your head."
-    puts "Type 'answer' if you know you will never get it."  
+    print "Type 'answer' if you know you will never get it.\n\n"  
   end
 
   def correct_answer
-    puts "Correct! You're not as dumb as you look..."
+    print "Correct! You're not as dumb as you look...\n\n"
   end
 
   def wrong_answer
@@ -17,7 +17,7 @@ module PrintDialogue
 
   def naughty_words
     puts "Don't be mean, I don't like you either."
-    puts "Everything is logged and posted to Socrates. I win."
+    print "Everything is logged and posted to Socrates. I win.\n\n"
   end
 
   def gave_up

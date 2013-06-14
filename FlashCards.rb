@@ -18,7 +18,6 @@ class FlashCards
 
   def play_game
     play_card
-    @input = gets.chomp
     while true
       if @current_card.is_answer?(@input)
         correct_answer
@@ -27,7 +26,6 @@ class FlashCards
         gave_up
         @current_card.print_answer
         play_card
-        @input = gets.chomp
       elsif @input == "fuck you"
         naughty_words
         @input = gets.chomp
@@ -43,6 +41,7 @@ class FlashCards
   def play_card
     @current_card = @deck.get_card
     @current_card.print_definition
+    @input = gets.chomp
   end
 
 

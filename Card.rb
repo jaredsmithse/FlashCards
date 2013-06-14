@@ -5,6 +5,14 @@ class Card
 		@word = word
 	end
 
+  def print_answer
+    puts "Answer: #{@word}"
+  end
+
+  def print_definition
+    puts "Definition: #{@definition}"
+  end
+
 	def is_answer?(potential_answer)
 		@word == potential_answer
 	end

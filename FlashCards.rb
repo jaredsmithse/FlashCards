@@ -1,8 +1,10 @@
 require './parser'
 require './deck'
 require './card'
+include 'print_dialogue'
 
 class FlashCards
+
   def initialize
     @parser = Parser.new('./flashcard_samples.txt')
     @deck = @parser.read_in_cards
@@ -22,21 +24,20 @@ class FlashCards
     @input = gets.chomp
     while true
       if @current_card.is_answer?(@input)
-        puts "Correct! You're not as dumb as you look..."
+        correct_answer
         play_card
       elsif @input == "answer"
-        puts "You should just give up on life, but here is your answer."
+        gave_up
         @current_card.print_answer
         play_card
         @input = gets.chomp
       elsif @input == "fuck you"
-        puts "Don't be mean, I don't like you either."
+        naughty_words
         @input = gets.chomp
       elsif @input == "exit"
         break
       else
-        puts "Wow, how do you not know this?"
-        puts "I'll let you try again because I feel bad for you.."
+        wrong_answer
         @input = gets.chomp
       end
     end

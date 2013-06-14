@@ -1,21 +1,18 @@
 require './parser'
 require './deck'
 require './card'
-include 'print_dialogue'
+require './printdialogue'
+
 
 class FlashCards
+  include PrintDialogue
 
   def initialize
     @parser = Parser.new('./flashcard_samples.txt')
     @deck = @parser.read_in_cards
     @current_card = nil
     @input = ""
-  end
-
-  def run
-    puts "Welcome to Flash Cards with Friends!"
-    puts "Type 'exit' if you feel you're in over your head."
-    puts "Type 'answer' if you know you will never get it."
+    game_start
     play_game
   end
 
@@ -52,4 +49,3 @@ class FlashCards
 end
 
 game = FlashCards.new
-game.run

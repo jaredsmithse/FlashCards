@@ -9,4 +9,8 @@ class Card
 		@word == potential_answer
 	end
 
+	def give_hint
+		@word[0]
+	end
+
 end
